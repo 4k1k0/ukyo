@@ -11,5 +11,7 @@
 <body>
   <header id="masthead">
     <div class="container-fluid">
+      <div id="menu-top">
+      </div>
     </div>    
   </header>
