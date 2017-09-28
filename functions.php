@@ -23,6 +23,11 @@
       'font-awesome',
       get_template_directory_uri() . '/assets/css/font-awesome.min.css'
     );
+    // General
+    wp_register_style(
+      'general',
+      get_template_directory_uri() . '/assets/css/general.css'
+    );
     // Header
     wp_register_style(
       'header',
@@ -38,6 +43,7 @@
   function agregar_archivos() {
     wp_enqueue_style('bootstrap');
     wp_enqueue_style('font-awesome');
+    wp_enqueue_style('general');
     wp_enqueue_style('header');
   }
 

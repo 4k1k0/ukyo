@@ -1,1 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
+#masthead .container-fluid #menu-top #menu nav ul { list-style: none; }
+
+#masthead .container-fluid #menu-top #menu nav ul li { display: inline-block; }
+
+#masthead .container-fluid #menu-top #menu nav ul li a { color: #3E4040; font-size: 2.5rem; padding: 0.5rem; }
+
+#masthead .container-fluid #menu-top #menu nav ul li a:hover { text-decoration: none; }

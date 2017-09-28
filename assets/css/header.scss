@@ -3,6 +3,27 @@
 #masthead {
   .container-fluid {
     #menu-top {
+      #logo {
+        
+      }
+      #menu {
+        nav {
+          ul {
+            list-style: none;
+            li {
+              display: inline-block;
+              a {
+                color: $negro;
+                font-size: $grande;
+                padding: 0.5rem;
+                &:hover {
+                  text-decoration: none;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
