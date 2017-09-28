@@ -18,6 +18,11 @@
       'bootstrap',
       get_template_directory_uri() . '/assets/css/bootstrap/bootstrap.min.css'
     );
+    // Header
+    wp_register_style(
+      'header',
+      get_template_directory_uri() . '/assets/css/header.css'
+    );
   }
 
   // Añadir los scripts y hojas de estilo
@@ -27,6 +32,7 @@
   );
   function agregar_archivos() {
     wp_enqueue_style('bootstrap');
+    wp_enqueue_style('header');
   }
 
 ?>

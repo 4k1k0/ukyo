@@ -10,5 +10,6 @@
 
 <body>
   <header id="masthead">
-
+    <div class="container-fluid">
+    </div>    
   </header>
