@@ -13,10 +13,11 @@
     1
   );
   function registrar_archivos() {
-    /*
-    // Nombre
-    wp_register_style( 'nombre', get_template_directory_uri() . '/assets/css/archivo.css' );
-     */
+    // Bootstrap
+    wp_register_style(
+      'bootstrap',
+      get_template_directory_uri() . '/assets/css/bootstrap/bootstrap.min.css'
+    );
   }
 
   // Añadir los scripts y hojas de estilo
@@ -25,10 +26,7 @@
     'agregar_archivos'
   );
   function agregar_archivos() {
-    /*
-     // Nombre 
-     wp_enqueue_style('nombre');
-    */
+    wp_enqueue_style('bootstrap');
   }
 
 ?>
