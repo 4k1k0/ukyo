@@ -37,8 +37,11 @@
               font-size: $grande;
               color: $blanco;
               padding: 0 $mediano;
+              transition: 0.3s all;
               &:hover {
                 text-decoration: none;
+                color: $gris-oscuro;
+                transition: 0.2s all;
               }
             }
           }

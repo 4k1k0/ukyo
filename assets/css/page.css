@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 #mastwrapper .container h1 { color: #3E4040; }
 
-#mastwrapper .container #programas-contenedor .programa-contenedor { border-bottom: 1px solid #7B7F7F; height: 200px; padding: 2.5rem 0; }
+#mastwrapper .container .programas-contenedor .programas-categoria { color: #B9BFBF; padding: 2.5rem 0; }
+
+#mastwrapper .container .programas-contenedor .programa-contenedor { float: left; width: 100%; clear: both; padding: 2.5rem; margin: 2.5rem 0; border-bottom: 1px solid #3E4040; }
+
+#mastwrapper .container .programas-contenedor .programa-contenedor:last-child { border: none; }
+
+#mastwrapper .container .programas-contenedor .programa-contenedor .programa-logo .row img { width: 100%; height: auto; }
+
+#mastwrapper .container .programas-contenedor .programa-contenedor .programa-info p a { color: #3E4040; }

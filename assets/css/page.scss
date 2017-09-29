@@ -5,11 +5,36 @@
     h1 {
       color: $negro;
     }
-    #programas-contenedor {
-      .programa-contenedor {
-        border-bottom: 1px solid $gris-oscuro;
-        height: 200px;
+    .programas-contenedor {
+      .programas-categoria {
+        color: $gris-medio;
         padding: $grande 0;
+      }
+      .programa-contenedor {
+        float: left;
+        width: 100%;
+        clear: both;
+        padding: $grande;
+        margin: $grande 0;
+        border-bottom: 1px solid $negro;
+        &:last-child {
+          border: none;
+        }
+        .programa-logo {
+          .row {
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+        }
+        .programa-info {
+          p {
+            a {
+              color: $negro;
+            }
+          }
+        }
       }
     }
   }

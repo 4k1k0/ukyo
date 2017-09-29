@@ -16,6 +16,12 @@
             <li>
               <a href="http://fontawesome.io/">Font Awesome</a>
             </li>
+            <li>
+              <a href="https://www.advancedcustomfields.com/">Advanced Custom Fields</a>
+            </li>
+            <li>
+              <a href="https://generatewp.com/">GenerateWP</a>
+            </li>
           </ul>
         </nav>
       </div>

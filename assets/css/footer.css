@@ -13,6 +13,6 @@
 
 #mastfooter .container #derecha nav ul li { display: inline-block; }
 
-#mastfooter .container #derecha nav ul li a { font-size: 2.5rem; color: #F6FFFF; padding: 0 1.5rem; }
+#mastfooter .container #derecha nav ul li a { font-size: 2.5rem; color: #F6FFFF; padding: 0 1.5rem; transition: 0.3s all; }
 
-#mastfooter .container #derecha nav ul li a:hover { text-decoration: none; }
+#mastfooter .container #derecha nav ul li a:hover { text-decoration: none; color: #7B7F7F; transition: 0.2s all; }

@@ -5,7 +5,7 @@
 
 #masthead .container #menu-top #logo .row h1 a:hover { text-decoration: none; }
 
-#masthead .container #menu-top #redes-sociales { display: flex; align-items: center; justify-content: center; }
+#masthead .container #menu-top #redes-sociales { display: flex; align-items: center; justify-content: flex-end; }
 
 #masthead .container #menu-top #redes-sociales nav ul { list-style: none; }
 
