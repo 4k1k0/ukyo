@@ -1,5 +1,17 @@
 @import 'main';
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*::selection {
+  background: $negro;
+  color: $gris-claro;
+}
+
 body {
   background: $blanco;
+  color: $gris-oscuro;
+  font-family: 'Montserrat';
 }

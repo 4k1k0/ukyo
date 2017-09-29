@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+#mastfooter { background: #3E4040; color: #F6FFFF; padding: 2.5rem 0; margin-top: 2.5rem; }
+
+#mastfooter .container { text-align: center; }
+
+#mastfooter .container #izquierda nav ul { list-style: none; }
+
+#mastfooter .container #izquierda nav ul li a { color: #DEE5E5; }
+
+#mastfooter .container #derecha p a { color: #DEE5E5; }
+
+#mastfooter .container #derecha nav ul { list-style: none; }
+
+#mastfooter .container #derecha nav ul li { display: inline-block; }
+
+#mastfooter .container #derecha nav ul li a { font-size: 2.5rem; color: #F6FFFF; padding: 0 1.5rem; }
+
+#mastfooter .container #derecha nav ul li a:hover { text-decoration: none; }

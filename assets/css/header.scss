@@ -1,24 +1,59 @@
 @import 'main';
 
 #masthead {
-  .container-fluid {
+  .container {
     #menu-top {
       #logo {
-        
+        .row {
+          h1 {
+            font-size: $grande * 2;
+            a {
+              color: $negro;
+              &:hover {
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+      #redes-sociales {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        nav {
+          ul {
+            list-style: none;
+            li {
+              display: inline;
+              a {
+                color: $gris-oscuro;
+                font-size: $grande;
+                padding: $grande 0.5rem;
+                transition: 0.3s all;
+                line-height: $grande * 2;
+                &:hover {
+                  text-decoration: none;
+                  color: $negro;
+                  transition: 0.2s all;
+                }
+              }
+            }
+          }
+        }
       }
       #menu {
-        nav {
+        float: left;
+        width: 100%;
+        .menu-top-container {
           ul {
             list-style: none;
             li {
               display: inline-block;
               a {
+                display: block;
+                padding: 0.5rem 1rem;
                 color: $negro;
-                font-size: $grande;
-                padding: 0.5rem;
-                &:hover {
-                  text-decoration: none;
-                }
+                text-align: center;
               }
             }
           }

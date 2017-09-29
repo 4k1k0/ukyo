@@ -1,0 +1,49 @@
+@import 'main';
+
+#mastfooter {
+  background: $negro;
+  color: $blanco;
+  padding: $grande 0;
+  margin-top: $grande;
+  .container {
+    text-align: center;
+    #izquierda {
+      nav {
+        ul {
+          list-style: none;
+          li {
+            a {
+              color: $gris-claro;
+            }
+          }
+        }
+      }
+    }
+    #centro {
+      
+    }
+    #derecha {
+      p {
+        a {
+          color: $gris-claro;
+        }
+      }
+      nav {
+        ul {
+          list-style: none;
+          li {
+            display: inline-block;
+            a {
+              font-size: $grande;
+              color: $blanco;
+              padding: 0 $mediano;
+              &:hover {
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,8 +1,24 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
-#masthead .container-fluid #menu-top #menu nav ul { list-style: none; }
+#masthead .container #menu-top #logo .row h1 { font-size: 5rem; }
 
-#masthead .container-fluid #menu-top #menu nav ul li { display: inline-block; }
+#masthead .container #menu-top #logo .row h1 a { color: #3E4040; }
 
-#masthead .container-fluid #menu-top #menu nav ul li a { color: #3E4040; font-size: 2.5rem; padding: 0.5rem; }
+#masthead .container #menu-top #logo .row h1 a:hover { text-decoration: none; }
 
-#masthead .container-fluid #menu-top #menu nav ul li a:hover { text-decoration: none; }
+#masthead .container #menu-top #redes-sociales { display: flex; align-items: center; justify-content: center; }
+
+#masthead .container #menu-top #redes-sociales nav ul { list-style: none; }
+
+#masthead .container #menu-top #redes-sociales nav ul li { display: inline; }
+
+#masthead .container #menu-top #redes-sociales nav ul li a { color: #7B7F7F; font-size: 2.5rem; padding: 2.5rem 0.5rem; transition: 0.3s all; line-height: 5rem; }
+
+#masthead .container #menu-top #redes-sociales nav ul li a:hover { text-decoration: none; color: #3E4040; transition: 0.2s all; }
+
+#masthead .container #menu-top #menu { float: left; width: 100%; }
+
+#masthead .container #menu-top #menu .menu-top-container ul { list-style: none; }
+
+#masthead .container #menu-top #menu .menu-top-container ul li { display: inline-block; }
+
+#masthead .container #menu-top #menu .menu-top-container ul li a { display: block; padding: 0.5rem 1rem; color: #3E4040; text-align: center; }

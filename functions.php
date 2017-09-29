@@ -33,6 +33,16 @@
       'header',
       get_template_directory_uri() . '/assets/css/header.css'
     );
+    // Page
+    wp_register_style(
+      'page',
+      get_template_directory_uri() . '/assets/css/page.css'
+    );
+    // Footer
+    wp_register_style(
+      'footer',
+      get_template_directory_uri() . '/assets/css/footer.css'
+    );
   }
 
   // Añadir los scripts y hojas de estilo
@@ -45,6 +55,8 @@
     wp_enqueue_style('font-awesome');
     wp_enqueue_style('general');
     wp_enqueue_style('header');
+    wp_enqueue_style('page');
+    wp_enqueue_style('footer');
   }
 
 ?>

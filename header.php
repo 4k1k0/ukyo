@@ -10,14 +10,20 @@
 
 <body>
   <header id="masthead">
-    <div class="container-fluid">
+    <div class="container">
       <div id="menu-top">
         
-        <div id="logo" class="col-md-6">
-          
+        <div id="logo" class="col-md-9">
+          <div class="row">
+            <h1>
+              <a href="<?php bloginfo('url'); ?>">
+                <?php bloginfo('name'); ?>
+              </a>
+            </h1>
+          </div>
         </div>
         
-        <div id="menu" class="col-md-6">
+        <div id="redes-sociales" class="col-md-3">
           <nav>
             <ul>
               <li>
@@ -26,8 +32,15 @@
               <li>
                 <a href="https://github.com/4k1k0/" class="fa fa-github"></a>
               </li>
+              <li>
+                <a href="https://gs.smuglo.li/akko" class="fa fa-linux"></a>
+              </li>
             </ul>
           </nav>
+        </div>
+        
+        <div id="menu">
+          <?php wp_nav_menu(array('menu' => 'Top')); ?>
         </div>
         
       </div>

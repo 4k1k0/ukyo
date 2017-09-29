@@ -1,0 +1,16 @@
+@import 'main';
+
+#mastwrapper {
+  .container {
+    h1 {
+      color: $negro;
+    }
+    #programas-contenedor {
+      .programa-contenedor {
+        border-bottom: 1px solid $gris-oscuro;
+        height: 200px;
+        padding: $grande 0;
+      }
+    }
+  }
+}

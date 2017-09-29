@@ -1,2 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
-body { background: #F6FFFF; }
+* { margin: 0; padding: 0; }
+
+*::selection { background: #3E4040; color: #DEE5E5; }
+
+body { background: #F6FFFF; color: #7B7F7F; font-family: 'Montserrat'; }
