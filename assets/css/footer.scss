@@ -5,6 +5,7 @@
   color: $blanco;
   padding: $grande 0;
   margin-top: $grande;
+  font-size: $mediano;
   .container {
     text-align: center;
     #izquierda {
@@ -20,7 +21,14 @@
       }
     }
     #centro {
-      
+      p {
+        #corazon {
+          color: red;  
+        }
+        a {
+          color: $blanco;
+        }
+      }
     }
     #derecha {
       p {

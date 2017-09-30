@@ -27,6 +27,17 @@
       </div>
       
       <div id="centro" class="col-md-4">
+        <p>
+          Hecho con 
+          <span id="corazon">
+            ♥
+          </span>
+        </p>
+        <p>
+          <a href="https://github.com/4k1k0/TEMA">
+            Código fuente
+          </a>
+        </p>
       </div>
       
       <div id="derecha" class="col-md-4">

@@ -82,7 +82,7 @@
                 Licencia: <?php the_field('licencia'); ?>
               </p>
               <p>
-                <a href="<?php the_field('sitio_web'); ?>">
+                <a href="<?php the_field('sitio_web'); ?>" target="_blank">
                   Sitio web
                 </a>
               </p>

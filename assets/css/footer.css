@@ -1,11 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
-#mastfooter { background: #3E4040; color: #F6FFFF; padding: 2.5rem 0; margin-top: 2.5rem; }
+#mastfooter { background: #3E4040; color: #F6FFFF; padding: 2.5rem 0; margin-top: 2.5rem; font-size: 1.5rem; }
 
 #mastfooter .container { text-align: center; }
 
 #mastfooter .container #izquierda nav ul { list-style: none; }
 
 #mastfooter .container #izquierda nav ul li a { color: #DEE5E5; }
+
+#mastfooter .container #centro p #corazon { color: red; }
+
+#mastfooter .container #centro p a { color: #F6FFFF; }
 
 #mastfooter .container #derecha p a { color: #DEE5E5; }
 
