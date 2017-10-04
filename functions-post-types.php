@@ -1,5 +1,5 @@
 <?php
-    // Android Post Type
+  // Android Post Type
   function android_post_type() {
     $labels = array(
       'name'                  => _x( 'Aplicaciones Android', 'Post Type General Name', 'text_domain' ),
@@ -35,7 +35,7 @@
   		'description'           => __( 'Aplicaciones de Android', 'text_domain' ),
   		'labels'                => $labels,
   		'supports'              => array( 'title', 'editor', 'thumbnail', 'custom_fields', ),
-  		'taxonomies'            => array( 'category', 'post_tag' ),
+  		'taxonomies'            => array( 'apps' ),
   		'hierarchical'          => false,
   		'public'                => true,
   		'show_ui'               => true,
@@ -90,7 +90,7 @@
   		'description'           => __( 'Aplicaciones de iOS', 'text_domain' ),
   		'labels'                => $labels,
   		'supports'              => array( 'title', 'editor', 'thumbnail', 'custom_fields', ),
-  		'taxonomies'            => array( 'category', 'post_tag' ),
+  		'taxonomies'            => array( 'apps' ),
   		'hierarchical'          => false,
   		'public'                => true,
   		'show_ui'               => true,

@@ -63,6 +63,6 @@
   include('functions-post-types.php');
   
   // Incluir Taxonomias
-  //include('functions-taxonomias.php');
+  include('functions-taxonomies.php');
   
 ?>

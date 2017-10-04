@@ -35,7 +35,8 @@
         $args = array(
           'orderby' => 'name',
           'parent' => 0,
-          'exclude' => '1'
+          'taxonomy' => 'apps',
+          'field' => 'slug'
         );
         $categorias = get_categories( $args );
         foreach ( $categorias as $categoria ) {
@@ -56,7 +57,7 @@
               'post_type' => $pagina,
               'posts_per_page' => -1,
               'orderby' => 'title',
-              'order' => 'ASC'
+              'order' => 'ASC',
             );
             $query = new WP_Query($args);
             while($query->have_posts()) : $query->the_post();
