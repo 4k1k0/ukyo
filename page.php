@@ -54,12 +54,6 @@
           $catName = $categoria->name;
           $catSlug = $categoria->slug;
       ?>
-      
-          <!-- Categoría -->
-          <h3 class="programas-categoria">
-            <?php echo $catName; ?>
-          </h3>
-          <!-- Termina categoría -->
           
           <!-- Comienza loop de programas -->  
           <?php
@@ -77,8 +71,19 @@
               ),
             );
             $query = new WP_Query($args);
+            $contador = 0;
+            if ( have_posts() ) :
             while($query->have_posts()) : $query->the_post();
           ?>
+          
+          <!-- Categoría -->
+          <h3 class="programas-categoria">
+            <?php
+              $contador++;
+              if ( $contador == 1 )
+                echo $catName; ?>
+          </h3>
+          <!-- Termina categoría -->
           
           <!-- Programa individual -->
           <div class="programa-contenedor">
@@ -116,6 +121,8 @@
                       echo "<a href='$url' class='fa fa-github'></a>";
                     } else if ( strpos($url, $gitlab) !== false ) {
                       echo "<a href='$url' class='fa fa-gitlab'></a>";
+                    } else {
+                      echo "<a href='$url' class='fa fa-git-square'></a>";
                     }
                   }
                 ?>
@@ -132,6 +139,7 @@
           <?php
             endwhile;
             wp_reset_postdata();
+            endif;
           ?>
           <!-- Termina loop de programas -->
           
