@@ -18,6 +18,7 @@
           </h1>
         </hgroup>
       </header>
+      <?php imagen_destacada(); ?>
       <?php the_content(); ?>
     </article>
   </div>

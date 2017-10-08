@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+#mastwrapper .container .articulo-individual { /* Articulo */ }
+
+#mastwrapper .container .articulo-individual .articulo-cabecera hgroup h1 a { color: #3E4040; }
+
+#mastwrapper .container .articulo-individual .img-responsive-thumbnail { width: 100%; height: auto; padding: 1.5rem 0; }
+
+#mastwrapper .container .articulo-individual p a { background: #3E4040; color: #F6FFFF; }
+
+#mastwrapper .container .articulo-individual p strong { color: #3E4040; }
+
+#mastwrapper .container .articulo-individual .wp-caption { width: 100% !important; display: flex; justify-content: center; }
+
+#mastwrapper .container .articulo-individual .wp-caption img { max-width: 100%; height: auto; padding: 1rem 0; }
+
+#mastwrapper .container .articulo-individual .wp-caption .wp-caption-text { display: none; }
+
+#mastwrapper .container .articulo-individual ul, #mastwrapper .container .articulo-individual ol { margin-left: 2rem; }
+
+#mastwrapper .container .articulo-individual blockquote { border-left: 5px solid #3E4040; }

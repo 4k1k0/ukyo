@@ -1,0 +1,51 @@
+@import 'main';
+
+#mastwrapper {
+  .container {
+    .articulo-individual {
+      .articulo-cabecera {
+        hgroup {
+          h1 {
+            a {
+              color: $negro;
+            }
+          }
+        }
+      }
+      /* Articulo */
+      .img-responsive-thumbnail {
+        width: 100%;
+        height: auto;
+        padding: 1.5rem 0;
+      }
+      p {
+        a {
+          background: $negro;
+          color: $blanco;
+        }
+        strong {
+          color: $negro;
+        }
+      }
+      .wp-caption {
+        width: 100% !important;
+        display: flex;
+        justify-content: center;
+        img {
+          max-width: 100%;
+          height: auto;
+          padding: 1rem 0;
+        }
+        .wp-caption-text {
+          display: none;
+        }
+      }
+      ul, ol {
+        margin-left: 2rem;
+      }
+      blockquote {
+        border-left: 5px solid $negro;
+      }
+    }
+  }
+}
