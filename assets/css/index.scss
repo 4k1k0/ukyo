@@ -3,6 +3,9 @@
 #mastwrapper {
   .container {
     .articulo-individual {
+      .error-404 {
+        font-size: $grande * 3;
+      }
       .articulo-cabecera {
         hgroup {
           h1 {

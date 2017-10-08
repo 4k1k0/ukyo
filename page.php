@@ -113,8 +113,8 @@
                 ?>
                 <?php
                   $url = get_field('git');
-                  $github = "https://github";
-                  $gitlab = "https://gitlab";
+                  $github = "github";
+                  $gitlab = "gitlab";
                   
                   if ( $url != "" ) {
                     if ( strpos($url, $github) !== false ) {

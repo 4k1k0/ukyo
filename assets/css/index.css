@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 #mastwrapper .container .articulo-individual { /* Articulo */ }
 
+#mastwrapper .container .articulo-individual .error-404 { font-size: 7.5rem; }
+
 #mastwrapper .container .articulo-individual .articulo-cabecera hgroup h1 a { color: #3E4040; }
 
 #mastwrapper .container .articulo-individual .img-responsive-thumbnail { width: 100%; height: auto; padding: 1.5rem 0; }

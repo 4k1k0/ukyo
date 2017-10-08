@@ -39,7 +39,7 @@
   
   add_action( 'init', 'apps_taxonomy', 0 );
   
-  /*
+  
   // Taxonomía para software de escritorio
   function software_taxonomy() {
   	$labels = array(
@@ -74,9 +74,9 @@
   		'show_tagcloud'              => true,
   		'show_in_rest'               => true,
   	);
-  	register_taxonomy( 'apps', array( '_post_type', '_post_type', '_post_type' ), $args );
+  	register_taxonomy( 'software', array( 'linux_post_type', 'mac_post_type', 'windows_post_type' ), $args );
   }
   
   add_action( 'init', 'software_taxonomy', 0 );
-  */
+  
 ?>
