@@ -10,3 +10,7 @@
 #mastwrapper .container .programas-contenedor .programa-contenedor .programa-logo .row img { width: 100%; height: auto; }
 
 #mastwrapper .container .programas-contenedor .programa-contenedor .programa-info p a { color: #3E4040; }
+
+#mastwrapper .container .programas-contenedor .programa-contenedor .programa-info p .fa { font-size: 2rem; padding: 0 0.5rem; transition: 0.3s all; }
+
+#mastwrapper .container .programas-contenedor .programa-contenedor .programa-info p .fa:hover { text-decoration: none; color: #7B7F7F; transition: 0.2s all; }

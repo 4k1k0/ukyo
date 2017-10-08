@@ -86,7 +86,7 @@
             <!-- Logo del programa -->
             <div class="programa-logo col-md-2">
               <div class="row">
-                <?php the_post_thumbnail(); ?>
+                <?php imagen_destacada(); ?>
               </div>
             </div>
             <!-- Termina logo del programa -->
@@ -103,6 +103,19 @@
                 <a href="<?php the_field('sitio_web'); ?>" target="_blank">
                   Sitio web
                 </a>
+                <?php
+                  $url = get_field('git');
+                  $github = "https://github";
+                  $gitlab = "https://gitlab";
+                  
+                  if ( $url != "" ) {
+                    if ( strpos($url, $github) !== false ) {
+                      echo "<a href='$url' class='fa fa-github'></a>";
+                    } else if ( strpos($url, $gitlab) !== false ) {
+                      echo "<a href='$url' class='fa fa-gitlab'></a>";
+                    }
+                  }
+                ?>
               </p>
               <div class="programa-descripcion">
                 <?php the_content(); ?>
