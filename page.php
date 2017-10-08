@@ -9,17 +9,27 @@
         $cat = strtolower(get_the_title());
         $pagina = $cat;
         switch($cat) {
+          case "android":
+            $pagina = $cat;
+            $taxonomia = "apps";
+            break;
           case "ios":
             $pagina = $cat;
+            $taxonomia = "apps";
             $cat = "apple";
             break;
           case "gnu/linux":
             $cat = "linux";
             $pagina = $cat;
+            $taxonomia = "software";
             break;
           case "mac os":
             $pagina = "mac";
             $cat = "apple";
+            $taxonomia = "software";
+            break;
+          case "windows":
+            $taxonomia = "software";
             break;
         }
         $pagina = $pagina . "_post_type";
@@ -35,13 +45,14 @@
         $args = array(
           'orderby' => 'name',
           'parent' => 0,
-          'taxonomy' => 'apps',
+          'taxonomy' => $taxonomia,
           'field' => 'slug'
         );
+        
         $categorias = get_categories( $args );
         foreach ( $categorias as $categoria ) {
           $catName = $categoria->name;
-          $catId = get_cat_ID( $catName); 
+          $catSlug = $categoria->slug;
       ?>
       
           <!-- Categoría -->
@@ -53,11 +64,17 @@
           <!-- Comienza loop de programas -->  
           <?php
             $args = array(
-              'cat' => $catId,
               'post_type' => $pagina,
               'posts_per_page' => -1,
               'orderby' => 'title',
               'order' => 'ASC',
+              'tax_query' => array(
+                array(
+                  'taxonomy' => $taxonomia,
+                  'field' => 'slug',
+                  'terms' => $catSlug,
+                ),
+              ),
             );
             $query = new WP_Query($args);
             while($query->have_posts()) : $query->the_post();
