@@ -100,9 +100,12 @@
                 Licencia: <?php the_field('licencia'); ?>
               </p>
               <p>
-                <a href="<?php the_field('sitio_web'); ?>" target="_blank">
-                  Sitio web
-                </a>
+                <?php
+                  $url = get_field('sitio_web');
+                  if ( $url != "" ) {
+                    echo "<a href='$url' target='_blank'>Sitio web</a>";
+                  }
+                ?>
                 <?php
                   $url = get_field('git');
                   $github = "https://github";
