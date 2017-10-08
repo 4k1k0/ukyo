@@ -5,7 +5,17 @@
 
   // Añadir Imagen Destacada
   add_theme_support('post-thumbnails');
-
+  
+  // Insertar Imagen Destacada
+  function imagen_destacada() {
+    if ( has_post_thumbnail() ):
+      the_post_thumbnail('post-thumbnail', ['class' => 'img-responsive-thumbnail']);
+    else:
+      $ruta = get_template_directory_uri();
+      echo "<img class='img-responsive-thumbnail' src='" . $ruta .  "/assets/img/destacada.jpg'>";
+    endif;
+  }
+  
   // Registrar scripts y hojas de estilo
   add_action(
     'wp_enqueue_scripts',
@@ -33,6 +43,11 @@
       'header',
       get_template_directory_uri() . '/assets/css/header.css'
     );
+    // Index
+    wp_register_style(
+      'index',
+      get_template_directory_uri() . '/assets/css/index.css'
+    );
     // Page
     wp_register_style(
       'page',
@@ -55,6 +70,7 @@
     wp_enqueue_style('font-awesome');
     wp_enqueue_style('general');
     wp_enqueue_style('header');
+    wp_enqueue_style('index');
     wp_enqueue_style('page');
     wp_enqueue_style('footer');
   }
