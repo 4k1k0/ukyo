@@ -20,7 +20,7 @@
       </header>
       <?php
         if ( has_post_thumbnail() ) :
-      the_post_thumbnail('post-thumbnail', ['class' => 'img-responsive-thumbnail']);
+          the_post_thumbnail('post-thumbnail', ['class' => 'img-responsive-thumbnail']);
         endif;
       ?>
       <?php the_content(); ?>
