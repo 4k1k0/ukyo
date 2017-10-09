@@ -34,7 +34,7 @@
           </span>
         </p>
         <p>
-          <a href="https://github.com/4k1k0/TEMA">
+          <a href="https://github.com/4k1k0/ukyo">
             Código fuente
           </a>
         </p>
