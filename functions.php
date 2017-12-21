@@ -7,12 +7,18 @@
   add_theme_support('post-thumbnails');
   
   // Insertar Imagen Destacada
-  function imagen_destacada($img = "assets/img/destacada.jpg") {
+  function imagen_destacada($clases = "", $img = "assets/img/destacada.jpg") {
     if ( has_post_thumbnail() ):
-      the_post_thumbnail('post-thumbnail', ['class' => 'img-responsive-thumbnail']);
+      if ( $clases == "" )
+        the_post_thumbnail('post-thumbnail');
+      else
+        the_post_thumbnail('post-thumbnail', ['class' => $clases]);
     else:
       $ruta = get_template_directory_uri();
-      echo "<img class='img-responsive-thumbnail' src='$ruta/$img'>";
+      if ( $clases == "" )
+        echo "<img src='$ruta/$img'>";
+      else
+        echo "<img class='$clases' src='$ruta/$img'>";
     endif;
   }
 
