@@ -7,15 +7,15 @@
   add_theme_support('post-thumbnails');
   
   // Insertar Imagen Destacada
-  function imagen_destacada() {
+  function imagen_destacada($img = "assets/img/destacada.jpg") {
     if ( has_post_thumbnail() ):
       the_post_thumbnail('post-thumbnail', ['class' => 'img-responsive-thumbnail']);
     else:
       $ruta = get_template_directory_uri();
-      echo "<img class='img-responsive-thumbnail' src='" . $ruta .  "/assets/img/destacada.jpg'>";
+      echo "<img class='img-responsive-thumbnail' src='$ruta/$img'>";
     endif;
   }
-  
+
   // Registrar scripts y hojas de estilo
   add_action(
     'wp_enqueue_scripts',
