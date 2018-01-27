@@ -28,7 +28,7 @@
 
       <div id="centro" class="col-md-4">
         <p>
-          Hecho con
+          Hecho con <br class="visible-xs visible-sm">
           <span id="corazon">
             ♥
           </span>
