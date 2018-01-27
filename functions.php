@@ -1,11 +1,11 @@
 <?php
-  
+
   // Añadir Menús
   add_theme_support('menus');
 
   // Añadir Imagen Destacada
   add_theme_support('post-thumbnails');
-  
+
   // Insertar Imagen Destacada
   function imagen_destacada($clases = "", $img = "assets/img/destacada.jpg") {
     if ( has_post_thumbnail() ):
@@ -47,7 +47,7 @@
     // Header
     wp_register_style(
       'header',
-      get_template_directory_uri() . '/assets/css/header.css'
+      get_template_directory_uri() . '/assets/css/header.min.css'
     );
     // Index
     wp_register_style(
@@ -57,7 +57,7 @@
     // Page
     wp_register_style(
       'page',
-      get_template_directory_uri() . '/assets/css/page.css'
+      get_template_directory_uri() . '/assets/css/page.min.css'
     );
     // Footer
     wp_register_style(
@@ -80,11 +80,11 @@
     wp_enqueue_style('page');
     wp_enqueue_style('footer');
   }
-  
+
   // Incluir Post Types
   include('functions-post-types.php');
-  
+
   // Incluir Taxonomias
   include('functions-taxonomies.php');
-  
+
 ?>

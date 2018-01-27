@@ -1,9 +1,106 @@
-@import 'main';
+@import 'main.scss';
+
+@keyframes menu-abrir {
+  0% {
+    left: -50vw;
+    background: rgba($negro, 0.7);
+    width: 50vw;
+  }
+  50% {
+    left: 0;
+    width: 100vw;
+  }
+  100% {
+    left: 0;
+    background: rgba($negro, 1);
+    width: 50vw;
+  }
+}
+
+@keyframes menu-cerrar {
+  from {
+    left: 100%;
+    transform: rotate(360deg);
+  }
+  to {
+    left: 0;
+    transform: rotate(0deg);
+  }
+}
 
 #masthead {
+  #menu-mobile {
+    background: $negro;
+    padding: 2rem 0;
+    position: fixed;
+    width: 50vw;
+    height: 100vh;
+    z-index: 1;
+    animation-duration: 1s;
+    animation-name: menu-abrir;
+    #menu-mobile-cerrar {
+      position: relative;
+      height: 4rem;
+      button {
+        display: block;
+        width: 4rem;
+        height: 4rem;
+        border: none;
+        position: absolute;
+        animation-duration: 1s;
+        animation-name: menu-cerrar;
+        background: none;
+        padding: 0 2rem;
+        .fa {
+          color: $blanco;
+          font-size: 4rem;
+        }
+      }
+    }
+    #menu-mobile-redes {
+      position: absolute;
+      bottom: 1rem;
+      width: 100%;
+      nav {
+        ul {
+          list-style: none;
+          padding: 0;
+          li {
+            display: inline-block;
+            margin: -2px;
+            width: 33.33333333333333333%;
+            text-align: center;
+            a {
+              font-size: 3rem;
+              color: $gris-oscuro;
+            }
+          }
+        }
+      }
+    }
+    #menu-mobile-menu {
+      nav {
+        ul {
+          list-style: none;
+          padding: 0;
+          li {
+            text-align: center;
+            a {
+              display: block;
+              padding: 0.5rem 0;
+              color: $blanco;
+            }
+          }
+        }
+      }
+    }
+  }
   .container {
     #menu-top {
       #logo {
+        @media(max-width: 414px) {
+          text-align: center;
+        }
         .row {
           h1 {
             font-size: $grande * 2;
