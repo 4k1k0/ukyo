@@ -2,7 +2,7 @@
 
 <main id="mastwrapper">
   <div class="container">
-    
+
     <h1 class="titulo-os">
       <?php the_title(); ?>
       <?php
@@ -36,10 +36,10 @@
         echo "<i class='fa fa-$cat'></i>";
       ?>
     </h1>
-    
+
     <!-- Contenedor de programas -->
     <div class="programas-contenedor">
-      
+
       <!-- Comienza loop de categorías -->
       <?php
         $args = array(
@@ -48,14 +48,14 @@
           'taxonomy' => $taxonomia,
           'field' => 'slug'
         );
-        
+
         $categorias = get_categories( $args );
         foreach ( $categorias as $categoria ) {
           $catName = $categoria->name;
           $catSlug = $categoria->slug;
       ?>
-          
-          <!-- Comienza loop de programas -->  
+
+          <!-- Comienza loop de programas -->
           <?php
             $args = array(
               'post_type' => $pagina,
@@ -75,7 +75,7 @@
             if ( have_posts() ) :
             while($query->have_posts()) : $query->the_post();
           ?>
-          
+
           <!-- Categoría -->
           <h3 class="programas-categoria">
             <?php
@@ -84,10 +84,10 @@
                 echo $catName; ?>
           </h3>
           <!-- Termina categoría -->
-          
+
           <!-- Programa individual -->
           <div class="programa-contenedor">
-              
+
             <!-- Logo del programa -->
             <div class="programa-logo col-md-2">
               <div class="row">
@@ -95,7 +95,7 @@
               </div>
             </div>
             <!-- Termina logo del programa -->
-            
+
             <!-- Info del programa -->
             <div class="programa-info col-md-10">
               <p>
@@ -115,14 +115,14 @@
                   $url = get_field('git');
                   $github = "github";
                   $gitlab = "gitlab";
-                  
+
                   if ( $url != "" ) {
                     if ( strpos($url, $github) !== false ) {
-                      echo "<a href='$url' class='fa fa-github'></a>";
+                      echo "<a href='$url' class='fa fa-github' target='_blank'></a>";
                     } else if ( strpos($url, $gitlab) !== false ) {
-                      echo "<a href='$url' class='fa fa-gitlab'></a>";
+                      echo "<a href='$url' class='fa fa-gitlab' target='_blank'></a>";
                     } else {
-                      echo "<a href='$url' class='fa fa-git-square'></a>";
+                      echo "<a href='$url' class='fa fa-git-square' target='_blank'></a>";
                     }
                   }
                 ?>
@@ -132,25 +132,25 @@
               </div>
             </div>
             <!-- Termina info del programa -->
-            
+
           </div>
           <!-- Termina programa individual -->
-          
+
           <?php
             endwhile;
             wp_reset_postdata();
             endif;
           ?>
           <!-- Termina loop de programas -->
-          
+
       <?php
         }
       ?>
-      <!-- Termina loop de categorías -->     
-      
+      <!-- Termina loop de categorías -->
+
     </div>
     <!-- Termina contenedor de programas -->
-    
+
   </div>
 </main>
 
