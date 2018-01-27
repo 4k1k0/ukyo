@@ -89,7 +89,7 @@
           <div class="programa-contenedor">
 
             <!-- Logo del programa -->
-            <div class="programa-logo col-md-2">
+            <div class="programa-logo col-sm-4 col-md-2">
               <div class="row">
                 <?php imagen_destacada(); ?>
               </div>
@@ -97,7 +97,7 @@
             <!-- Termina logo del programa -->
 
             <!-- Info del programa -->
-            <div class="programa-info col-md-10">
+            <div class="programa-info col-sm-8 col-md-10">
               <p>
                 Nombre: <?php the_title(); ?>
               </p>

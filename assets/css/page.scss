@@ -13,6 +13,10 @@
       .programas-categoria {
         color: $gris-medio;
         padding: $grande 0;
+        @media(max-width: 768px) {
+          width: 100%;
+          clear: both;
+        }
         @media(max-width: 414px) {
           text-align: center;
         }
@@ -24,6 +28,11 @@
         padding: $grande;
         margin: $grande 0;
         border-bottom: 1px solid $negro;
+        @media(max-width: 768px) {
+          margin: 0;
+          padding: 0;
+          border: none;
+        }
         &:last-child {
           border: none;
         }
