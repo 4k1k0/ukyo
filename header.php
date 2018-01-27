@@ -14,16 +14,28 @@
 <body>
   <header id="masthead">
 
+    <div id="menu-mobile-abrir-contenedor" class="visible-xs visible-sm">
+      <button>
+        <i id="menu-mobile-abrir-boton" class="fa fa-bars" aria-hidden="true"></i>
+      </button>
+      <h1>
+        <a href="<?php bloginfo('url'); ?>">
+          <?php bloginfo('name'); ?>
+        </a>
+      </h1>
+    </div>
+
     <div id="menu-mobile" class="visible-xs visible-sm">
 
       <div id="menu-mobile-cerrar">
-        <button>
-          <i class="fa fa-times" aria-hidden="true"></i>
+        <button id="menu-mobile-cerrar-boton-contenedor">
+          <i id="menu-mobile-cerrar-boton" class="fa fa-times" aria-hidden="true"></i>
         </button>
       </div>
 
       <div id="menu-mobile-menu">
         <nav>
+          <a id="menu-mobile-menu-inicio" href="<?php bloginfo('url'); ?>">Inicio</a>
           <?php wp_nav_menu(array('menu' => 'Top')); ?>
         </nav>
       </div>
@@ -31,9 +43,9 @@
       <div id="menu-mobile-redes">
         <nav>
           <ul>
-            <li><a href="https://twitter.com/akkonomi" class="fa fa-twitter"></a></li>
-            <li><a href="https://github.com/4k1k0/" class="fa fa-github"></a></li>
-            <li><a href="https://gs.smuglo.li/akko" class="fa fa-linux"></a></li>
+            <li><a href="https://twitter.com/akkonomi" class="fa fa-twitter" target="_blank"></a></li>
+            <li><a href="https://github.com/4k1k0/" class="fa fa-github" target="_blank"></a></li>
+            <li><a href="https://gs.smuglo.li/akko" class="fa fa-linux" target="_blank"></a></li>
           </ul>
         </nav>
       </div>
@@ -58,13 +70,13 @@
           <nav>
             <ul>
               <li>
-                <a href="https://twitter.com/akkonomi" class="fa fa-twitter"></a>
+                <a href="https://twitter.com/akkonomi" class="fa fa-twitter" target="_blank"></a>
               </li>
               <li>
-                <a href="https://github.com/4k1k0/" class="fa fa-github"></a>
+                <a href="https://github.com/4k1k0/" class="fa fa-github" target="_blank"></a>
               </li>
               <li>
-                <a href="https://gs.smuglo.li/akko" class="fa fa-linux"></a>
+                <a href="https://gs.smuglo.li/akko" class="fa fa-linux" target="_blank"></a>
               </li>
             </ul>
           </nav>

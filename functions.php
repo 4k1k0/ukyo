@@ -64,6 +64,11 @@
       'footer',
       get_template_directory_uri() . '/assets/css/footer.css'
     );
+    // Menu Mobile Script
+    wp_register_script(
+      'menu-mobile',
+      get_template_directory_uri() . '/assets/js/menu-mobile.js'
+    );
   }
 
   // Añadir los scripts y hojas de estilo
@@ -79,6 +84,7 @@
     wp_enqueue_style('index');
     wp_enqueue_style('page');
     wp_enqueue_style('footer');
+    wp_enqueue_script('menu-mobile');
   }
 
   // Incluir Post Types

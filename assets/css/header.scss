@@ -18,17 +18,105 @@
 }
 
 @keyframes menu-cerrar {
+  0% {
+    left: 0;
+    background: rgba($negro, 1);
+    width: 50vw;
+  }
+  50% {
+    left: 0;
+    width: 100vw;
+  }
+  100% {
+    left: -50vw;
+    background: rgba($negro, 0.7);
+    width: 50vw;
+  }
+}
+
+@keyframes menu-cerrar-icono-contenedor-abrir {
   from {
-    left: 100%;
-    transform: rotate(360deg);
+    left: 70%;
+    transform: rotateX(360deg);
   }
   to {
     left: 0;
+    transform: rotateX(0deg);
+  }
+}
+
+@keyframes menu-cerrar-icono-contenedor-cerrar {
+  from {
+    left: 0;
+    transform: rotateX(0deg);
+  }
+  to {
+    left: 70%;
+    transform: rotateX(360deg);
+  }
+}
+
+@keyframes menu-cerrar-icono-abrir {
+  from {
+    color: $negro;
+    transform: rotate(90deg);
+    transform: scale(0.1);
+  }
+  to {
+    color: $blanco;
     transform: rotate(0deg);
+    transform: scale(1);
+  }
+}
+
+@keyframes menu-cerrar-icono-cerrar {
+  from {
+    color: $blanco;
+    transform: rotate(0deg);
+    transform: scale(1);
+  }
+  to {
+    color: $negro;
+    transform: rotate(90deg);
+    transform: scale(0.1);
   }
 }
 
 #masthead {
+  @media(max-width: 768px) {
+    padding-bottom: 5rem;
+  }
+  #menu-mobile-abrir-contenedor {
+    width: 100%;
+    position: fixed;
+    background: $negro;
+    z-index: 1;
+    h1 {
+      text-align: center;
+      margin-top: -5rem;
+      a {
+        color: $blanco;
+      }
+    }
+    button {
+      border: none;
+      padding: 1rem;
+      background: none;
+      .fa {
+        color: $blanco;
+        font-size: 4rem;
+      }
+    }
+  }
+  .menu-mobile-activo {
+    animation-duration: 1s;
+    animation-name: menu-abrir;
+    left: 0 !important;
+  }
+  .menu-mobile-inactivo {
+    animation-duration: 1s;
+    animation-name: menu-cerrar;
+  }
   #menu-mobile {
     background: $negro;
     padding: 2rem 0;
@@ -36,21 +124,36 @@
     width: 50vw;
     height: 100vh;
     z-index: 1;
-    animation-duration: 1s;
-    animation-name: menu-abrir;
+    left: -50vw;
     #menu-mobile-cerrar {
       position: relative;
       height: 4rem;
+      .boton-cerrar-contenedor-abrir {
+        animation-duration: 1s;
+        animation-name: menu-cerrar-icono-contenedor-abrir;
+      }
+      .boton-cerrar-contenedor-cerrar {
+        animation-duration: 1s;
+        animation-name: menu-cerrar-icono-contenedor-cerrar;
+      }
       button {
         display: block;
         width: 4rem;
         height: 4rem;
         border: none;
         position: absolute;
-        animation-duration: 1s;
-        animation-name: menu-cerrar;
         background: none;
-        padding: 0 2rem;
+        margin-top: -1rem;
+        padding-left: 1rem;
+        outline: none;
+        .boton-cerrar-abrir {
+          animation-duration: 1s;
+          animation-name: menu-cerrar-icono-abrir;
+        }
+        .boton-cerrar-cerrar {
+          animation-duration: 1s;
+          animation-name: menu-cerrar-icono-cerrar;
+        }
         .fa {
           color: $blanco;
           font-size: 4rem;
@@ -72,13 +175,19 @@
             text-align: center;
             a {
               font-size: 3rem;
-              color: $gris-oscuro;
+              color: $blanco;
             }
           }
         }
       }
     }
     #menu-mobile-menu {
+      a {
+        text-align: center;
+        display: block;
+        padding: 0.5rem 0;
+        color: $blanco;
+      }
       nav {
         ul {
           list-style: none;
@@ -97,6 +206,7 @@
   }
   .container {
     #menu-top {
+      display: block;
       #logo {
         @media(max-width: 414px) {
           text-align: center;
