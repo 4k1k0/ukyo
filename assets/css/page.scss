@@ -4,7 +4,7 @@
   .container {
     h1 {
       color: $negro;
-      @media(max-width: 414px) {
+      @media(max-width: 768px) {
         text-align: center;
         padding-top: 4rem;
       }

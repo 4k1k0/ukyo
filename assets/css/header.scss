@@ -47,12 +47,10 @@
 
 @keyframes menu-cerrar-icono-contenedor-cerrar {
   from {
-    left: 0;
-    transform: rotateX(0deg);
+    transform: scale(1) rotateX(0deg);
   }
   to {
-    left: 70%;
-    transform: rotateX(360deg);
+    transform: scale(0) rotateX(360deg);
   }
 }
 
@@ -72,19 +70,15 @@
 @keyframes menu-cerrar-icono-cerrar {
   from {
     color: $blanco;
-    transform: rotate(0deg);
-    transform: scale(1);
   }
   to {
     color: $negro;
-    transform: rotate(90deg);
-    transform: scale(0.1);
   }
 }
 
 #masthead {
   @media(max-width: 768px) {
-    padding-bottom: 5rem;
+    margin-bottom: 5rem;
   }
   #menu-mobile-abrir-contenedor {
     width: 100%;
@@ -102,6 +96,7 @@
       border: none;
       padding: 1rem;
       background: none;
+      outline: none;
       .fa {
         color: $blanco;
         font-size: 4rem;
@@ -161,9 +156,7 @@
       }
     }
     #menu-mobile-redes {
-      position: absolute;
-      bottom: 1rem;
-      width: 100%;
+      padding: 5rem 0;
       nav {
         ul {
           list-style: none;
@@ -187,6 +180,7 @@
         display: block;
         padding: 0.5rem 0;
         color: $blanco;
+        font-size: 2rem;
       }
       nav {
         ul {
